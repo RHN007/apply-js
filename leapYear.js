@@ -1,12 +1,15 @@
 function isLeapYear(year) {
-  const remainder = year % 4;
+  //three condition to find out the leap year
 
-  if (remainder == 0) {
+  if ((0 == year % 4 && 0 != year % 100) || 0 == year % 400) {
     return true;
   } else {
     return false;
   }
 }
 
-const check2000 = isLeapYear(2000);
-console.log(check2000);
+//take input
+
+const year = promt("Enter a year");
+
+isLeapYear(year);
